@@ -11,19 +11,13 @@ export const TasklistReducer=(state=initialState,{type,Payload})=>{
 switch (type) {
     case ADD_TASK:
         return {...state,Tasks:[...state.Tasks,{id:Math.random(),name:Payload,isDone:false}]}   
-
     case DONE_TASK:
         return {...state,Tasks:state.Tasks.map(el=>el.id==Payload?{...el,isDone:!el.isDone}:el)}
-
     case DELETE_TASK:
         return {...state,Tasks:state.Tasks.filter(el=>el.id!==Payload)}
-
     case EDIT_TASK:
         return{...state,Tasks:state.Tasks.map(el=>el.id==Payload.id?{...el,name:Payload.newTask}:el)}    
-
-    default: return state
-
-       
+    default: 
+        return state
 }
-
 }
