@@ -6,6 +6,7 @@ import AddMovie from "./Components/AddMovie";
 import ProductList from "./Components/Ecommerce/ProductList";
 import ADDProduct from "./Components/Ecommerce/AddProduct";
 import EditProduct from "./Components/Ecommerce/EditProduct";
+import TaskList from "./Components/Todolist/TaskList";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/AddMovie" element={<AddMovie />} />
         <Route path="/Ecommerce" element={<ProductList />} />
         <Route path="/EditProduct/:id" element={<EditProduct />} />
+        <Route path="/TaskList"element={<TaskList/>}/>
       </Routes>
     </div>
   );
